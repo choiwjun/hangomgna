@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <!-- 공통 meta -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, viewport-fit=cover">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>HANCOM GNA AUCTION</title>
+  <!-- 공통 css -->
+  <link rel="stylesheet" href="css/reset.css" type="text/css">
+  <link rel="stylesheet" href="css/sub.css" type="text/css">
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
+</head>
+
+<body>
+    <header>
+        <div>
+            <h1><a href="index.html">HANCOM GNA AUCTION</a></h1>
+        </div>
+        <div class="burger">
+            <a class="menu-trigger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </a>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="company.html">회사소개</a></li>
+                <li><a href="contact.html">오시는길</a></li>
+            </ul>
+            <div>
+                <p>금으로 돈버는 마켓, 골드바인</p>
+                <p>지금 바로 시작해보세요!</p>
+                <p class="app_down_link">
+                    <a href="https://play.google.com/store/apps/details?id=com.hancom.gold" target="_blank">GOLD VINE APP</a>
+                </p>
+            </div>
+        </nav>
+    </header>
+    <content>
+        <section id="sub_visual" class="sub_visual02">
+            <div class="inner">
+                <h2>Contact Us</h2>
+                <div class="pattern">
+                    <i class="ico02"></i>
+                </div>
+            </div>
+        </section>
+        <section id="contact" class="sub_contents">
+            <div class="inner">
+                <h3 class="contact_title" data-aos="fade-up">서울 본사<p>서울 종로구 돈화문로 5가길 1 피카디리플러스 3층</p></h3>
+            </div>
+            <div class="map_area" data-aos="fade-up">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3162.3257991138703!2d126.98907461533153!3d37.57094523163334!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357ca2ddf8ef0467%3A0xf0de619dee519abb!2z7ISc7Jq47Yq567OE7IucIOyiheuhnOq1rCDrj4jsnZjrj5kg64-I7ZmU66y466GcNeqwgOq4uCAx!5e0!3m2!1sko!2skr!4v1601366179499!5m2!1sko!2skr" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+            </div>
+        </section>
+    </content>
+    <!-- 공통 script -->
+    <footer id="footer">
+        <div class="ft_info_area">
+            <img class="ft_logo" src="images/ft_logo.png" />
+            <div class="ft_txt">
+                <p>회사명 : 한컴GNA옥션</p>
+                <p><span>주소 : 서울 종로구 돈화문로 5가길 1 피카디리플러스 3층</span><!-- span>전화번호 : 000-000-0000</span><span>팩스 : 000-000-0000</span --></p>
+                <p><span>대표자 : 김순응, 김기영</span><span>사업자등록번호 : 882-86-01797</span></p>
+            </div>
+        </div>
+        <div class="ft_copy_area">
+            
+            <p>COPYRIGHT ⓒ 2020 HANCOM GNA AUCTION<br/>ALL RIGHT RESERVED.</p>
+        </div>
+    </footer>
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            easing: 'ease-in-out',
+            duration: 1000,
+        });
+    </script>
+    <script>
+		$(document).ready(function(){
+			setTimeout(function() { 
+			    $('#sub_visual h2').addClass('on'); 			    
+			}, 150);
+		    setTimeout(function() { 
+			    $('#sub_visual .pattern').addClass('on'); 			    
+			}, 300);
+		});
+    </script>
+    <script>
+        var burger = $('.menu-trigger');
+    burger.each(function(index){
+        var $this = $(this);
+        
+        $this.on('click', function(e){
+            e.preventDefault();
+            $(this).toggleClass('active-' + (index+1));
+            if($(this).hasClass('active-1')){
+                $('nav').show();
+                $('html, body').toggleClass("not_scroll")
+                $("header").addClass("scroll");
+                $('.menu-trigger span').css('background-color','black')
+            }
+            else if($(document).scrollTop() > 1){
+                $('nav').hide();
+                $("header").addClass("scroll")
+                $('html, body').toggleClass("not_scroll")
+            }
+            else{
+                $('nav').hide();
+                $('html, body').toggleClass("not_scroll")
+                $("header").removeClass("scroll")
+                $('.menu-trigger span').css('background-color','white')
+            }
+        })
+    });
+    // 헤더 스크롤 이벤트
+	window.onscroll = function(){
+		if($(document).scrollTop() > 1){
+            $("header").addClass("scroll");
+            $('.menu-trigger span').css('background-color','black')
+            
+		}else{
+            $("header").removeClass("scroll");
+            $('.menu-trigger span').css('background-color','white')
+            
+		}
+    }
+    </script>
+</body>
+
+</html>

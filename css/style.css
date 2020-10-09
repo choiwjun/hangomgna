@@ -1,0 +1,236 @@
+.menu-trigger {
+	margin-right:1.5rem;
+	margin-bottom:0px;
+}
+.menu-trigger,
+.menu-trigger span {
+	display: inline-block;
+	transition: all .4s;
+	box-sizing: border-box;
+}
+
+.menu-trigger {
+	position: relative;
+	width:1.7rem;
+	height:1.5rem;
+}
+
+.menu-trigger span {
+	position: absolute;
+	left: 0;
+	width: 100%;
+	height: 4px;
+	background-color: white;
+	border-radius: 4px;
+}
+
+.menu-trigger span:nth-of-type(1) {
+	top: 0;
+}
+
+.menu-trigger span:nth-of-type(2) {
+	top:10px;
+}
+
+.menu-trigger span:nth-of-type(3) {
+	bottom: 0;
+}
+
+/* type-01 */
+/* 중앙 라인이 고정된 자리에서 투명하게 사라지며 상하라인 회전하며 엑스자 만들기 */
+.menu-trigger.active-1 span:nth-of-type(1) {
+	-webkit-transform: translateY (10px) rotate (-45deg);
+	transform: translateY(10px) rotate(-45deg);
+}
+
+.menu-trigger.active-1 span:nth-of-type(2) {
+	opacity: 0;
+}
+
+.menu-trigger.active-1 span:nth-of-type(3) {
+	-webkit-transform: translateY(-10px) rotate(45deg);
+	transform: translateY(-10px) rotate(45deg);
+}
+
+nav{display:none;background:white;height:100vh;}
+nav ul{margin-top:20%;text-align:center;}
+nav ul li{font-size:30px}
+nav ul li a{color:#222}
+nav ul li:last-child{margin-top:3rem}
+nav div:last-child{position:fixed;bottom:0;text-align:center;background:url('../images/bg_nav_bottom.png') 0 bottom no-repeat;background-size:100% 100%;width:100%;height:40%;
+	padding-top:2rem}
+nav div:last-child p{font-weight:bold;color:#222;font-size:18px;}
+nav .active{display:block}
+.not_scroll{overflow-y: hidden; overflow-x: hidden;}
+.n_scroll{overflow-y:scroll; overflow-x: scroll;}
+header{position:fixed;top:0;z-index:999;width:100%;}
+header h1{display:inline-block;margin:1.3rem 0 0 1.5rem;height:34px;background:url('../images/img_logo.png') no-repeat 0 0;width:159px;}
+header h1 a{opacity:0;}
+.app_down_link{background:#222;text-align:center;padding:5px 0 9px;width:10rem;margin:10px auto 0;}
+.app_down_link a{color:white;font-size:12px}
+header.scroll {background-color: #fff; border-bottom: 1px solid #ddd;}
+header.scroll h1{background-image: url('../images/img_logo_on.png');margin-bottom:1.3rem}
+.burger{position: absolute;right:0;top:1.3rem}
+/* 비주얼 슬라이드 */
+#visual {height:100vh;}
+#visual .swiper-slide {background-repeat: no-repeat; background-position: 0 0; background-size: cover;}
+#visual .slide01 {background-image: url(../images/img_top_visual1.png);}
+#visual .slide02 {background-image: url(../images/img_top_visual2.png);}
+#visual .slide03 {background-image: url(../images/img_top_visual3.png);}
+#visual .swiper-slide .inner { height: 100%;}
+#visual .swiper-slide .txt_box {position: absolute; top:40%; transform: translateY(-50%);text-align:center;width:100%}
+#visual .swiper-slide .txt_box strong {opacity: 0; display: block; font-size:2.4rem; color: #fff;}
+#visual .swiper-slide .txt_box p {opacity: 0; margin:20px 0 0 0; font-size:1.5rem; color: #fff;}
+#visual .swiper-slide .txt_box p:last-child{font-size:1.4rem;color:white;text-decoration:underline;margin-top:3rem}
+#visual .swiper-slide .txt_box p:last-child a{color:white}
+#visual .swiper-pagination {bottom: 7%; height: 2px;}
+#visual .swiper-pagination .swiper-pagination-bullet {opacity: 1; margin: 0 2.5px; width: 10px; height: 2px; border-radius: 0; background-color: rgba(255,255,255,0.7); vertical-align: top;}
+#visual .swiper-pagination .swiper-pagination-bullet-active {width:20px; background-color: #fff;}
+#visual .swiper-slide-active .txt_box strong {animation: opacityAnimation 1s .5s ease 1 forwards;}
+#visual .swiper-slide-active .txt_box p {animation: opacityAnimation 1s 1s ease 1 forwards;}
+
+#visual .swiper-slide .pattern {width:100%;position:absolute;bottom:-15px;}
+#visual .swiper-slide .pattern i {opacity: 0; display: block;background-repeat: no-repeat; background-position: 0 0;float:right;background-size: cover;}
+
+#visual .slide01 .pattern .circle {margin:-6.9rem 1.5rem 0 0;width:110px;height:110px; background-image: url(../images/visu01_pattern_circle.png);}
+#visual .slide01 .pattern .m {margin:-3rem 3rem 0 0;width:120px; height:127px; background-image: url(../images/visu01_pattern_m.png);}
+
+#visual .slide02 .pattern .h {margin:-6.9rem 5rem 0 0;width:80px;height:80px; background-image: url(../images/visu02_pattern_h.png);}
+#visual .slide02 .pattern .c {margin:-3rem 1.5rem 0 0;width:135px; height:135px; background-image: url(../images/visu02_pattern_c.png);}
+
+#visual .slide03 .pattern .circle {margin:-3rem 1.5rem 0 0;width:135px; height:135px; background-image: url(../images/visu03_pattern_circle.png);}
+#visual .slide03 .pattern .triangle {margin:-6.9rem 5rem 0 0;width:80px;height:80px; background-image: url(../images/visu03_pattern_triangle.png);}
+
+#visual .swiper-slide-active .pattern .ico01 {animation: slideUpAnimation 1s 0.5s ease 1 forwards;}
+#visual .swiper-slide-active .pattern .ico02 {animation: slideUpAnimation 1s 1s ease 1 forwards;}
+
+@-webkit-keyframes opacityAnimation {
+    from { opacity:0;}
+    to { opacity:1;}
+}
+@-moz-keyframes opacityAnimation {
+    from { opacity:0;}
+    to { opacity:1;}
+}
+@-o-keyframes opacityAnimation {
+    from { opacity:0;}
+    to { opacity:1;}
+}
+@keyframes opacityAnimation {
+    from { opacity:0;}
+    to { opacity:1;}
+}
+
+@-webkit-keyframes slideUpAnimation {
+    from { opacity:0; top: 20px;}
+    to { opacity:1; top: 0;}
+}
+@-moz-keyframes slideUpAnimation {
+    from { opacity:0; top: 20px;}
+    to { opacity:1; top: 0;}
+}
+@-o-keyframes slideUpAnimation {
+    from { opacity:0; top: 20px;}
+    to { opacity:1; top: 0;}
+}
+@keyframes slideUpAnimation {
+    from { opacity:0; top: 20px;}
+    to { opacity:1; top: 0;}
+}
+/* 메인 타이틀 */
+.main_title {margin: 0 0 1.5rem; text-align: center;}
+.main_title h2 {font-size:25px; font-weight: 600; color: #222;}
+.main_title p {font-size:18px; color: #222; font-weight: 600;}
+
+/* 포털서비스 */
+#service {padding:5rem 0 0;}
+#product {position: relative;}
+#product:before {display: block; position: absolute; top: 0; left: 0; width:100%; height:20rem;background-color: #ffdc35; content: '';}
+#product .swiper-slide  {opacity: 0 !important; position: relative;}
+#product .swiper-slide .inner:after {display: block; clear: both; *zoom: 1; content: '';}
+#product .swiper-slide .inner .txt_box {padding:3.5rem 3rem 2.5rem 3rem;text-align:center}
+#product .swiper-slide .inner .txt_box span {display: block; margin: 0 0 10px; font-size:16px; color: #333;}
+#product .swiper-slide .inner .txt_box strong {display: block; font-size:18px; color: #333;}
+#product .swiper-slide .inner .txt_box p {margin: 30px 0 0; font-size:12px; font-weight: 300; color: #333;}
+#product .swiper-slide .img_box {position: relative;width:200px;left:2.5rem;z-index:1;}
+#product .swiper-slide .img_box img {display: block;width:100%}
+#product .swiper-slide .prd_img {width:100%;position: relative;z-index:2;float:right;text-align:right;}
+#product .swiper-slide .prd_img img{display: block;width:150px}
+#product .swiper-slide-active {opacity: 1 !important;}
+#product .page_inner {position: absolute; margin: 0 auto; top:25%; left: 0; right: 0; height: 32px;}
+#product .page_inner .swiper-pagination {top: 0; left: 0; bottom: auto; width: auto; text-align: left; font-size: 27px; color: #333;}
+#product .page_inner .swiper-button {top: 5px; right: auto; margin-top: 0; width: 11px; height: 22px; background-repeat: no-repeat; background-position: 0 0; background-size: cover;}
+#product .page_inner .swiper-button-prev {left:1.5rem; background-image: url(../images/arrow_prev.png);}
+#product .page_inner .swiper-button-next {right:1.5rem; background-image: url(../images/arrow_next.png);}
+#product .page_inner .swiper-button-prev:after, #product .page_inner .swiper-container-rtl .swiper-button-next:after {display: none;}
+#product .page_inner .swiper-button-next:after, #product .page_inner .swiper-container-rtl .swiper-button-prev:after {display: none;}
+
+.section_con {position: relative;}
+.section_con:after {display: block; clear: both; *zoom: 1; content: '';}
+.section_con .txt_box h3 {display: block; font-size:30px; font-weight: 600; color: #333;}
+.section_con .txt_box p {margin:1rem 0 0; font-size:14px;color: #666;}
+.section_con .img_box {position: relative;}
+.section_con .img_box img {vertical-align: top;}
+.section_con .img_box .img01 {width: 100%;}
+.section_con .img_box .img02 {position: absolute;}
+
+/* 금감정시스템 */
+#appraise {position: relative;padding:5rem 0 0; background: #fff url(../images/appraise_bg.png) left 1.5rem top 5rem no-repeat;background-size:90px 90px;}
+#appraise .main_title {text-align:center;}
+#appraise .section_con .txt_boxz {text-align:center;}
+#appraise .section_con .img_box{background:url(../images/blockchain_bg.png) no-repeat right 0 bottom -5px / contain;background-size:100px 130px;padding-bottom:50px}
+#appraise .section_con .img_box .img01{width:calc(100% - 3rem);padding-left:3rem;overflow: hidden;margin-top:2rem}
+#appraise .section_con .img_box .img02 {clear:both;width:50%;position: relative;left:0;margin-top:2rem;}
+
+/* 블록체인 */
+#blockchain {padding-top:3rem;}
+#blockchain .section_con .txt_box {text-align:center;}
+#blockchain .section_con .img_box {width:100%;margin-top:2rem}
+
+/* 안전시스템 */
+#safe {padding:5rem 0 0;}
+#safe .section_con .txt_box {margin-left:1.5rem}
+#safe .section_con{ background:url(../images/safe_bg.png) no-repeat left 0 bottom -5px / contain;background-size:142px 142px;padding-bottom:50px}
+#safe .section_con .img_box .img01{width:calc(100% - 3rem);padding-right:3rem;overflow: hidden;margin-top:2rem}
+#safe .section_con .img_box .img02 {clear:both;width:50%;position: relative;right:0;margin-top:2rem;float:right}
+
+
+/* 회사소개 */
+#company {position: relative; margin:5rem 0 0; padding:50px 0px;}
+#company:before {position: absolute; top: 0; right: 0; width:100%; height: 50%; background-color: #365ee5; z-index: -1; content: '';}
+#company .inner:after {display: block; clear: both; *zoom: 1; content: '';}
+#company .img_box {position: relative; overflow: hidden; width:90%;top:30px;margin:0 auto}
+#company .img_box:before {display: block; padding-top: 62.814%; content: '';}
+#company .img_box img {position: absolute; top: 0; left: 0; width: 100%; height: 100%; vertical-align: top;}
+#company .txt_box {float: left; width:100%;text-align:center;}
+#company .txt_box strong {display: block;font-family: 'Poppins', sans-serif; font-size: 21px; font-weight: 500; color: #fff;}
+#company .txt_box a {margin-top:30px;position: relative; display: inline-block;font-family: 'Poppins', sans-serif; font-size: 20px; font-weight: 500; color: #fff; letter-spacing: -0.02em; 
+    border: 2px solid #365ee5; border-bottom: 2px solid #fff; -webkit-transition: all .3s ease; -moz-transition: all .3s ease; -ms-transition: all .3s ease; -o-transition: all .3s ease; transition: all .3s ease;}
+#company .txt_box a:before {visibility: hidden; opacity: 0; position: absolute; top: 50%; right: 15px; transform: translateY(-50%) rotate(45deg); width: 8px; height: 8px; 
+    border-top: 2px solid #365ee5; border-right: 2px solid #365ee5; -webkit-transition: all .3s ease; -moz-transition: all .3s ease; -ms-transition: all .3s ease; -o-transition: all .3s ease; transition: all .3s ease; content: '';}
+#company .txt_box a:hover {padding: 0 30px 0 20px; border: 2px solid #fff; background-color: #fff; color: #365ee5; border-radius: 25px;}
+#company .txt_box a:hover:before {visibility: visible; opacity: 1;}
+
+/* 앱 스토어 다운 */
+#app {position: relative; overflow: hidden;padding:5rem 0 20rem 0; margin:5rem 0 0;background: #ffe536 url(../images/app_down_bg.png) no-repeat 0 bottom / contain;background-size:75%}
+#app .txt_box {text-align:center;}
+#app .txt_box p {font-size:14px; color: #333;}
+#app .txt_box strong {display: block; margin: 20px 0 30px; font-size:24px;color: #333;}
+#app .txt_box a {margin:0 auto;display: block; width:70%;padding:15px 0; font-family: 'Poppins', sans-serif; font-size: 17px; font-weight: 700; 
+	color: #fff; background-color: #222; letter-spacing: 0;}
+
+#app .txt_box a + a {margin: 20px 0 0;}
+#app .txt_box a i {display: inline-block; margin: 0 20px 0 0; width: 24px; height:24px; vertical-align: top; background-repeat: no-repeat; background-position: center center;}
+#app .txt_box a i.ico_google {background-image: url(../images/ico_google.png);}
+#app .txt_box a i.ico_apple {background-image: url(../images/ico_apple.png);}
+#app .hand_img {position: absolute; right:0%; bottom: -7.3%; width:75%;}
+
+/* Footer */
+#footer {padding:5rem 1.5rem;}
+#footer:after {display: block; clear: both; *zoom: 1; content: '';}
+#footer .ft_info_area {width:100%;text-align:left;font-size:1.4rem;}
+#footer .ft_info_area .ft_logo {display: block;width:100%}
+#footer .ft_info_area p {line-height: 1.6; color: #666;}
+#footer .ft_info_area p span + span {margin: 0 0 0 15px;}
+#footer .ft_copy_area p {line-height: 1.5;color: #666;}
+#footer .ft_txt{clear:both;text-align:left;margin:1rem 0;font-size:1.4rem;}

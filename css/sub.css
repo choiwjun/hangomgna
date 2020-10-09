@@ -1,0 +1,153 @@
+.menu-trigger {
+	margin-right:1.5rem;
+	margin-bottom:0px;
+}
+.menu-trigger,
+.menu-trigger span {
+	display: inline-block;
+	transition: all .4s;
+	box-sizing: border-box;
+}
+
+.menu-trigger {
+	position: relative;
+	width:1.7rem;
+	height:1.5rem;
+}
+
+.menu-trigger span {
+	position: absolute;
+	left: 0;
+	width: 100%;
+	height: 4px;
+	background-color: white;
+	border-radius: 4px;
+}
+
+.menu-trigger span:nth-of-type(1) {
+	top: 0;
+}
+
+.menu-trigger span:nth-of-type(2) {
+	top:10px;
+}
+
+.menu-trigger span:nth-of-type(3) {
+	bottom: 0;
+}
+
+/* type-01 */
+/* 중앙 라인이 고정된 자리에서 투명하게 사라지며 상하라인 회전하며 엑스자 만들기 */
+.menu-trigger.active-1 span:nth-of-type(1) {
+	-webkit-transform: translateY (10px) rotate (-45deg);
+	transform: translateY(10px) rotate(-45deg);
+}
+
+.menu-trigger.active-1 span:nth-of-type(2) {
+	opacity: 0;
+}
+
+.menu-trigger.active-1 span:nth-of-type(3) {
+	-webkit-transform: translateY(-10px) rotate(45deg);
+	transform: translateY(-10px) rotate(45deg);
+}
+
+nav{display:none;background:white;height:100vh;}
+nav ul{margin-top:20%;text-align:center;}
+nav ul li{font-size:30px}
+nav ul li a{color:#222}
+nav ul li:last-child{margin-top:3rem}
+nav div:last-child{position:fixed;bottom:0;text-align:center;background:url('../images/bg_nav_bottom.png') 0 bottom no-repeat;background-size:100% 100%;width:100%;height:40%;
+	padding-top:2rem}
+nav div:last-child p{font-weight:bold;color:#222;font-size:18px;}
+nav .active{display:block}
+.not_scroll{overflow-y: hidden; overflow-x: hidden;}
+.n_scroll{overflow-y:scroll; overflow-x: scroll;}
+header{position:fixed;top:0;z-index:999;width:100%;}
+header h1{display:inline-block;margin:1.3rem 0 0 1.5rem;height:34px;background:url('../images/img_logo.png') no-repeat 0 0;width:159px;}
+header h1 a{opacity:0;}
+.app_down_link{background:#222;text-align:center;padding:5px 0 9px;width:10rem;margin:10px auto 0;}
+.app_down_link a{color:white;font-size:12px}
+header.scroll {background-color: #fff; border-bottom: 1px solid #ddd;}
+header.scroll h1{background-image: url('../images/img_logo_on.png');margin-bottom:1.3rem}
+.burger{position: absolute;right:0;top:1.3rem}
+
+
+#sub_visual {width: 100%; height:50vh; background-repeat: no-repeat; background-position: center center; background-size: cover;}
+#sub_visual.sub_visual01 {background-image: url(../images/sub_visual01.png);}
+#sub_visual.sub_visual02 {background-image: url(../images/sub_visual02.png);}
+#sub_visual .inner {position: relative; height: 100%;}
+#sub_visual .inner h2 {opacity: 0; position: absolute; font-family: 'Poppins'; font-size:25px; font-weight: 600; color: #fff; letter-spacing: 0;top:40%;left:1.5rem}
+#sub_visual .inner .ico {opacity: 0; display: block; position: absolute; bottom: 135px; right: 0; width: 195px; height: 194px; background: url(../img/sub/sub_visual_icon.png) no-repeat 0 0; content: '';}
+#sub_visual .inner h2.on {animation: opacityAnimation 1s .5s ease 1 forwards;}
+#sub_visual .inner .ico.on {animation: opacityAnimation 1s .5s ease 1 forwards;}
+#sub_visual .inner .pattern {position: absolute; top:45%; transform: translateY(-50%); right:2rem;}
+#sub_visual .inner .pattern i {opacity: 0; display: block; float: left; background-repeat: no-repeat; background-position: 0 0; vertical-align: top;}
+#sub_visual .inner .pattern .ico01 {margin: 4px 0 0; width:96px; height: 96px; background-image: url(../images/sub_visual_icon.png);background-size:contain;}
+#sub_visual .inner .pattern.on .ico01 {animation: opacityAnimation 1s .5s ease 1 forwards;}
+
+#sub_visual .inner .pattern .ico02 {margin: 4px 0 0; width:96px; height: 96px; background-image: url(../images/sub_visual_icon2.png);background-size:contain;}
+#sub_visual .inner .pattern.on .ico02 {animation: opacityAnimation 1s .5s ease 1 forwards;}
+@-webkit-keyframes opacityAnimation {
+    from { opacity:0;}
+    to { opacity:1;}
+}
+@-moz-keyframes opacityAnimation {
+    from { opacity:0;}
+    to { opacity:1;}
+}
+@-o-keyframes opacityAnimation {
+    from { opacity:0;}
+    to { opacity:1;}
+}
+@keyframes opacityAnimation {
+    from { opacity:0;}
+    to { opacity:1;}
+}
+
+/* sub contents */
+.sub_contents {padding:5rem 0 0;}
+/* 회사소개 */
+.company .txt_box h3 {font-size:24px; color: #333;text-align:center;padding:0 1.5rem;}
+.company .txt_box p {margin:25px 0 0;font-size:12px; color: #333;padding:0 1.5rem}
+.company .txt_box img {display: block; margin:20px 0 0;}
+.business {position: relative; margin:5rem 0 0; background-color: #ffdc35;}
+.business .inner {position: relative; z-index: 1;}
+.business .inner ul {padding:5rem 0;}
+.business .inner ul:after {display: block; clear: both; *zoom: 1; content: '';}
+.business .inner ul li {width:100%; text-align: center;}
+.business .inner ul li i {display: block;width:92px; height:92px;background-size:cover;margin:0 auto 1.5rem auto}
+.business .inner ul li:nth-child(1) i {background-image: url(../images/ico_service01.png);}
+.business .inner ul li:nth-child(2) i {background-image: url(../images/ico_service02.png);}
+.business .inner ul li:last-child{margin-top:5rem}
+.business .inner strong {display: block; font-size: 26px; color: #333;}
+.business .inner ul li p {margin:12px 0 0; font-size:14px;color: #333;}
+.business .bg_text {position: absolute; top:0%; transform: translateY(-50%); left:1.5rem; right: 0; margin: 0 auto; font-family: 'Poppins'; 
+    font-size:50px; font-weight: 600; color:#222;}
+
+.service h3 {padding:5rem 0 0; font-family: 'Poppins'; font-size:32px; font-weight: 600; color: #222;text-align:center;}
+.service ul {overflow: hidden; width: 100%; margin-top:3rem}
+.service ul li {display: block; width: 100%;clear:both;text-align:center;margin-bottom:3rem}
+.service ul li img{width:90%}
+
+.service .txt_box {margin:24px 0 0;}
+.service .txt_box strong {display: block; font-size:21px; color: #333;}
+.service .txt_box p {margin: 20px 0 0; font-size:14px;color: #333;}
+
+
+/* 오시는 길 */
+#contact .contact_title {font-size:25px; font-weight: 600; color: #333;margin-left:1.5rem}
+#contact .contact_title p {display: inline-block; margin:1rem 0 0 0; font-size:15px; font-weight: 400; color: #333;}
+#contact .map_area {margin:3rem auto 5rem auto; width:90%; height:20rem;}
+#contact .map_area iframe {width: 100%; height: 100%; vertical-align: top;}
+
+
+/* Footer */
+#footer {padding:5rem 1.5rem;border-top:1px solid #e6e6e6}
+#footer:after {display: block; clear: both; *zoom: 1; content: '';}
+#footer .ft_info_area {width:100%;text-align:left;font-size:1.4rem;}
+#footer .ft_info_area .ft_logo {display: block;width:100%}
+#footer .ft_info_area p {line-height: 1.6; color: #666;}
+#footer .ft_info_area p span + span {margin: 0 0 0 15px;}
+#footer .ft_copy_area p {line-height: 1.5;color: #666;}
+#footer .ft_txt{clear:both;text-align:left;margin:1rem 0;font-size:1.4rem;}
